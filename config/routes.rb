@@ -1,4 +1,10 @@
 CurrencyTracker::Application.routes.draw do
+  get "sessions/new"
+
+  get "sessions/create"
+
+  get "sessions/destroy"
+
   root :to => "currencies#index"
   
   resources :countries, :except => [:new, :destroy]
